@@ -1,11 +1,13 @@
 const express = require('express');
 const connectDB=require('./config/db')
 const app =express();
+var cors = require('cors')
 
 connectDB();
 
 //Init middleware
 app.use(express.json({extended:false}));
+app.use(cors())
 
 app.get('/',(req, res)=>res.send('Api Running'));
 
