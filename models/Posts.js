@@ -25,7 +25,7 @@ const PostSchema = new Schema({
             }
         }
     ],
-    commensts:[
+    comments:[
         {
             user:{
                 type:Schema.Types.ObjectId,
