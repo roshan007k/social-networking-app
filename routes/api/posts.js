@@ -176,7 +176,7 @@ router.delete('/comment/:id/:comment_id',auth,async (req,res)=>{
         //Pull comment
         const comment=await post.comments.find(comment=>comment.id ===req.params.comment_id)
         if(!comment){
-            return res.status(404).json({msg:"comment does not exist"})
+            return res.status(404).json({msg:"Comment does not exist"})
         }
         //Check user
         if(comment.user.toString()!==req.user.id){
