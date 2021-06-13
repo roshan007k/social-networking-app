@@ -38,7 +38,7 @@ const EditProfile = ({profile:{profile,loading},createProfile,getCurrentProfile,
             instagram:loading || !profile.instagram ? '':profile.instagram,
         });
 
-    },[loading]);
+    },[loading,getCurrentProfile]);
     const{
         company,
         website,

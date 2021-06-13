@@ -8,6 +8,8 @@ const request = require('request')
 const config=require('config')
 var cors = require('cors')
 
+const Post=require('../../models/Posts')
+
 const {check,validationResult} =require('express-validator')
 //@route GET api/Profiles/me
 //Get Current users profile
@@ -134,6 +136,8 @@ router.get('/user/:user_id',async (req,res)=>{
 //@access Private
 router.delete('/',auth,async (req,res)=>{
     try {
+        //Remove User posts
+        await Post.deleteMany({user:req.user.id});
         //Remove Profile
         await Profile.findOneAndRemove({user:req.user.id});
         await User.findOneAndRemove({_id:req.user.id});

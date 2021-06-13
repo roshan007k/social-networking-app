@@ -1,0 +1,6 @@
+{
+    "mongoURI":"mongodb+srv://roshank:roshank@devconnect.bb3ub.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "jwtSecret":"secretToken",
+    "githubClientId":"a5ae27f81746709ea933",
+    "githubSecret":"d676347baf971d05b0e96b5a900b472a07d2e64d"
+}
